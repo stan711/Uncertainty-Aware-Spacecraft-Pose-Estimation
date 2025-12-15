@@ -29,7 +29,7 @@ The primary goals are:
 This project is based on the following paper and codebase:
 
 > **SPNv2: Robust Multi-task Learning and Online Refinement for Spacecraft Pose Estimation across Domain Gap**  
-> Authors: *[Tae Ha Parka, Simone D’Amicoa]*  
+> Authors: *[Tae Ha Parka, Simone D’Amico]*  
 > Paper: *https://arxiv.org/pdf/2203.04275*  
 > Code: https://github.com/tpark94/spnv2
 
