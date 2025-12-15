@@ -1,0 +1,3 @@
+TEST:
+  MODEL_FILE: /home/stan711/dev/spnv2/checkpoints/spnv2_efficientnetb3_fullconfig_offline.pth
+

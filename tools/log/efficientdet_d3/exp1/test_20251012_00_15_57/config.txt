@@ -1,0 +1,94 @@
+AUGMENT:
+  ADJUST_BRIGHTNESS_CONTRAST: False
+  APPLY_BLUR: False
+  APPLY_NOISE: False
+  APPLY_RANDOM_ERASE: False
+  APPLY_SOLAR_FLARE: False
+  APPLY_TEXTURE_RANDOMIZATION: False
+  P: 0.5
+  RANDOM_TEXTURE:
+    ALPHA: 0.5
+    PROB: 0.5
+AUTO_RESUME: True
+CUDA: False
+CUDNN:
+  BENCHMARK: True
+  DETERMINISTIC: False
+  ENABLED: True
+DATASET:
+  CADMODEL: /Users/taehapark/SLAB/Dataset/models/tango.ply
+  CAMERA: /Users/taehapark/SLAB/Dataset/speedplus/camera.json
+  DATANAME: speedplus
+  IMAGE_SIZE: [1920, 1200]
+  INPUT_SIZE: [768, 512]
+  KEYPOINTS: /Users/taehapark/SLAB/Dataset/models/tangoPoints.mat
+  MAX_NUM_OBJECTS: 1
+  NUM_ANCHORS: 9
+  NUM_KEYPOINTS: 11
+  OUTPUT_SIZE: [4, 8, 16, 32]
+  ROOT: /Users/taehapark/SLAB/Dataset
+  SIGMA: 2
+DIST:
+  BACKEND: nccl
+  MULTIPROCESSING_DISTRIBUTED: False
+  RANK: 0
+EXP_NAME: exp1
+FP16: False
+LOG_DIR: log
+MODEL:
+  BACKBONE:
+    EXTRA:
+      EFFICIENTNET_CHANNELS: [24, 32, 48, 136, 384]
+    NAME: efficientdet_d3
+    PRETRAINED: None
+  EFFICIENTDET_PHI: 0
+  FIND_UNUSED_PARAM: False
+  GROUPNORM_SIZE: 16
+  HEAD:
+    ANCHOR_RATIO: None
+    ANCHOR_SCALE: None
+    EFFICIENTPOSE_LOSS_FACTOR: None
+    LOSS_FACTORS: [1.0]
+    LOSS_HEADS: ['heatmap']
+    LOSS_NUMS: [2]
+    NAMES: ['heatmap']
+    POSE_REGRESSION_LOSS: transformation
+  PRETRAIN_FILE: None
+  USE_GROUPNORM_BACKBONE: False
+  USE_GROUPNORM_HEADS: False
+ODR:
+  IMAGES_PER_BATCH: 4
+  MIN_ENTROPY: False
+  NUM_TRAIN_SAMPLES: 1024
+OUTPUT_DIR: outputs
+PIN_MEMORY: True
+ROOT: /media/shared/Jeff/SLAB/spnv2
+SEED: None
+TEST:
+  BBOX_THRESHOLD: 0.5
+  HEAD: ['heatmap']
+  HEATMAP_THRESHOLD: 0.5
+  IMAGES_PER_GPU: 1
+  MODEL_FILE: outputs/efficientdet_d3/exp1/model_best.pth.tar
+  SPEED_THRESHOLD_Q: 0.169
+  SPEED_THRESHOLD_T: 0.002173
+  TEST_CSV: lightbox/splits/lightbox.csv
+TRAIN:
+  BEGIN_EPOCH: 0
+  END_EPOCH: 100
+  GAMMA1: 0.9
+  GAMMA2: 0.0
+  IMAGES_PER_GPU: 32
+  LR: 0.001
+  LR_FACTOR: 0.1
+  LR_STEP: [90, 110]
+  OPTIMIZER: SGD
+  SCHEDULER: step
+  SHUFFLE: True
+  TRAIN_CSV: synthetic/splits/train.csv
+  VALID_FRACTION: None
+  VALID_FREQ: 20
+  VAL_CSV: synthetic/splits/validation.csv
+  WD: 0.0001
+  WORKERS: 4
+VERBOSE: False
