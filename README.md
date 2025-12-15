@@ -28,10 +28,10 @@ The primary goals are:
 
 This project is based on the following paper and codebase:
 
-> **Spacecraft Pose Network v2 (SPNv2)**  
-> Authors: *[Original authors as listed in the paper]*  
-> Paper: *IEEE / CVPR / ECCV publication*  
-> Code: https://github.com/***ORIGINAL_SPNV2_REPOSITORY***
+> **SPNv2: Robust Multi-task Learning and Online Refinement for Spacecraft Pose Estimation across Domain Gap**  
+> Authors: *[Tae Ha Parka, Simone D’Amicoa]*  
+> Paper: *https://arxiv.org/pdf/2203.04275*  
+> Code: https://github.com/tpark94/spnv2
 
 All credit for the original model architecture, training strategy, and dataset
 design belongs to the SPNv2 authors.  
